@@ -47,12 +47,12 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     arel (8.0.0)
-<<<<<<< HEAD
+
     autoprefixer-rails (8.4.1)
       execjs
-=======
+
     bcrypt (3.1.11)
->>>>>>> 70cd6a14048a2538de2a8d3c20bd5404bee6cd95
+
     bindex (0.5.0)
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)

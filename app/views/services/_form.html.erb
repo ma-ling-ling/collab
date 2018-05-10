@@ -27,7 +27,17 @@
   </div>
 
   <div class="field">
-    <%= form.label :point_value %>
+    <%= form.label :minimum_number_of_hours_you_will_accept_for_a_booking %>
+    <%= form.text_field :duration_min, id: :service_duration_min %>
+  </div>
+
+  <div class="field">
+    <%= form.label :maximum_number_of_hours_that_you_will_accept_for_a_booking %>
+    <%= form.text_field :duration_max, id: :service_duration_max %>
+  </div>
+
+  <div class="field">
+    <%= form.label :point_value_per_hour %>
     <%= form.text_field :point_value, id: :service_point_value %>
   </div>
 

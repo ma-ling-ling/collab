@@ -10,10 +10,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180509184128) do
+ActiveRecord::Schema.define(version: 20180513143953) do
+
+  create_table "cart_items", force: :cascade do |t|
+    t.integer "service_id"
+    t.decimal "hours_ordered"
+    t.decimal "cart_item_total"
+    t.text "message_to_provider"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "line_items", force: :cascade do |t|
+    t.integer "service_id"
+    t.decimal "hours_ordered"
+    t.decimal "line_item_total"
+    t.text "message_to_provider"
+    t.integer "order_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer "user_id"
+    t.decimal "subtotal"
+    t.decimal "fees"
+    t.decimal "grand_total"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

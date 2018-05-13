@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
   protected  #This is a Ruby keyword; private/public/protected deal with accessibility 
 	def configure_permitted_parameters
-		devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :point_bank => 10])
-		devise_parameter_sanitizer.permit(:account_update, keys: [:name, :point_bank])
+		devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
+		devise_parameter_sanitizer.permit(:account_update, keys: [:name])
 	end
 end
